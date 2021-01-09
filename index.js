@@ -19,12 +19,14 @@ app.use(cors());
 //Habilitar Express.json
 app.use(express.json({ extended: true}));
 
+const port = process.env.port || 4000;
 
 
 app.use("/api/firstExercise", firstExercise);
 app.use("/api/secondExercise", secondExercise);
 
-const port = 4000;
+
+
 app.listen(port, '0.0.0.0', () => {
     console.log(`Listen on port ${port}`);
 });
