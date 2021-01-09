@@ -14,12 +14,14 @@ var cors = require("cors");
 
 const app = express();
 
-
-app.use(express.json({ limit: '100mb' }));
-app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(cors());
 
-//app.use("/api/firstExercise", firstExercise);
+//Habilitar Express.json
+app.use(express.json({ extended: true}));
+
+
+
+app.use("/api/firstExercise", firstExercise);
 app.use("/api/secondExercise", secondExercise);
 
 const port = 4000;
