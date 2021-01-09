@@ -22,7 +22,7 @@ app.use(cors());
 //app.use("/api/firstExercise", firstExercise);
 app.use("/api/secondExercise", secondExercise);
 
-const port = 80;
+const port = 4000;
 app.listen(port, '0.0.0.0', () => {
     console.log(`Listen on port ${port}`);
 });
